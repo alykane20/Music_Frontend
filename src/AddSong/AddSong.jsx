@@ -10,21 +10,23 @@ const AddSong = (props) => {
     const[genre, setGenre] = useState('');
 
 
-    async function createSong(newsong){
+    async function createSong(){
+        let newSong = {
+            title: title,
+            artist: artist,
+            album: album,
+            release_date: releaseDate,
+            genre: genre,
+            likes: 0,
+            album_art: "coming soon!"
+            };
         let response = await axios.post('http://127.0.0.1:8000/music/', newSong)
         if(response.status === 201){
-            await getAllSongs();
+            await props.getAllSongs();
         }}
     function handleSubmit(event) {
         event.preventDefault();
-        let newSong = {
-            "title": "Weight of the World",
-            "artist": "Red Weather",
-            "album": "Empty Places",
-            "release_date": "2020-06-20",
-            "genre": "Alternative",
-            };
-            props.createSong(newSong)
+        createSong();
         }
     
     return (  
@@ -50,9 +52,7 @@ const AddSong = (props) => {
                 <label>Genre</label>
                 <input type="text"  value={genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
-            <button type='submit' >Add Song</button>
-
-
+            <button type='submit'>Add Song</button>
         </form>
     );
 }
