@@ -1,3 +1,21 @@
 .form{
     margin-left: 3%;
+    margin-right: 70%;
+    margin-top: 3%;
+    border: solid maroon;
+    
+}
+
+.add-button{
+    background-color: maroon;
+    color: gold;
+    margin-top: 5px;
+    border-radius: 12px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+.label{
+    margin-right: 5px;
+    margin-left: 3px;
 }

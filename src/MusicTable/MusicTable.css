@@ -2,6 +2,7 @@
     border: solid;
     width: 100%;
     background-color: cornsilk;
+    
 }
 
 .table-header{
@@ -14,5 +15,6 @@ height: 45px;
 
 .row{
     border: solid;
-    text-align: center
+    text-align: center;
+    border-width: thin;
 }

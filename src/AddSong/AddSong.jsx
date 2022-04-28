@@ -35,26 +35,26 @@ const AddSong = (props) => {
         <form className="form" onSubmit={handleSubmit}>
             <h4>Add a song to the mix!</h4>
             <div>
-                <label>Title</label>
+                <label className="label">Title</label>
                 <input type="text"  value={title} onChange={(event) => setTitle(event.target.value)}/>
             </div>
             <div>
-                <label>Artist</label>
+                <label className="label">Artist</label>
                 <input type="text"  value={artist} onChange={(event) => setArtist(event.target.value)}/>
             </div>
             <div>
-                <label>Album</label>
+                <label className="label">Album</label>
                 <input type="text"  value={album} onChange={(event) => setAlbum(event.target.value)}/>
             </div>
             <div>
-                <label>Release Date</label>
+                <label className="label">Release Date</label>
                 <input type="text" placeholder="YYYY-MM-DD" value={releaseDate} onChange={(event) => setReleaseDate(event.target.value)}/>
             </div>
             <div>
-                <label>Genre</label>
+                <label className="label">Genre</label>
                 <input type="text"  value={genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
-            <button type='submit'>Add Song</button>
+            <button className="add-button" type='submit'>Add Song</button>
         </form>
     );
 }
