@@ -3,6 +3,7 @@ import axios from 'axios';
 import MusicTable from './MusicTable/MusicTable';
 import './App.css';
 import AddSong from './AddSong/AddSong';
+import SearchBar from './SearchBar/SearchBar';
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
       </div>
       <div>
         <AddSong/>
+      </div>
+      <div>
+        <SearchBar songs={songs} setSongs={setSongs} />
       </div>
 
 
