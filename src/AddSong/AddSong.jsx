@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import './AddSong.css'
 
 
 const AddSong = (props) => {
@@ -27,10 +28,11 @@ const AddSong = (props) => {
     function handleSubmit(event) {
         event.preventDefault();
         createSong();
+        
         }
-    
+
     return (  
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <h4>Add a song to the mix!</h4>
             <div>
                 <label>Title</label>

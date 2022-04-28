@@ -1,4 +1,6 @@
 import React from "react";
+import './MusicTable.css'
+
 
 
 const MusicTable = (props) => {
@@ -6,9 +8,9 @@ const MusicTable = (props) => {
     return (
         <div>
             <h3>Check out our music!</h3>
-            <table>
+            <table className="table">
                 <tbody>
-                    <tr>
+                    <tr className="table-header">
                         <th>Title</th>
                         <th>Artist</th>
                         <th>Album</th>
@@ -16,12 +18,12 @@ const MusicTable = (props) => {
                         <th>Genre</th>
                     </tr>
                     {props.songs.map((song)=>(
-                    <tr key={song.id}>
-                        <td>{song.title}</td>
-                        <td>{song.artist}</td>
-                        <td>{song.album}</td>
-                        <td>{song.release_date}</td>
-                        <td>{song.genre}</td>
+                    <tr className="row" key={song.id}>
+                        <td className="row">{song.title}</td>
+                        <td className="row">{song.artist}</td>
+                        <td className="row">{song.album}</td>
+                        <td className="row">{song.release_date}</td>
+                        <td className="row">{song.genre}</td>
                     </tr>
                     ))}
                 </tbody>

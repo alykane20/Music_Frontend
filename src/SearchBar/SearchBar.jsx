@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from "axios";
+import './SearchBar.css'
 
 
 const SearchBar = (props) => {
@@ -8,27 +8,27 @@ const SearchBar = (props) => {
     function findSong(event){
         event.preventDefault();
         let response = props.songs.filter((el) => {
-            if (el.title.includes(search)) {return true
+            if (el.title.toLowerCase().includes(search.toLowerCase())) {return true
             }
-            else if (el.artist.includes(search)) {return true
+            else if (el.artist.toLowerCase().includes(search.toLowerCase())) {return true
             }
-            else if (el.album.includes(search)) {return true
+            else if (el.album.toLowerCase().includes(search.toLowerCase())) {return true
             }
-            else if (el.release_date.includes(search)) {return true
+            else if (el.release_date.toLowerCase().includes(search.toLowerCase())) {return true
             }
-            else if (el.genre.includes(search)) {return true
+            else if (el.genre.toLowerCase().includes(search.toLowerCase())) {return true
             }
         });
         props.setSongs(response)
             }
      
     return (
-        <form onSubmit={findSong}>
+        <form onSubmit={findSong} className='search-box'>
             <div>
-                <input type="text" 
+                <input className='input' placeholder="What are you looking for?" type="text" 
                 value={search} 
                 onChange={(event) =>setSearch(event.target.value)} />
-                <button type="submit">Search</button>
+                <button  type="submit" className="search-button">Search</button>
             </div>
         </form>
       );

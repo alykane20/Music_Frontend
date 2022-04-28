@@ -5,6 +5,7 @@ import './App.css';
 import AddSong from './AddSong/AddSong';
 import SearchBar from './SearchBar/SearchBar';
 
+
 function App() {
 
   const[songs, setSongs] = useState([]);
@@ -19,7 +20,8 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='background'>
+      <h1 className='header'>Welcome to the Music Library</h1>
       <div>
         <MusicTable songs={songs}/>
       </div>
@@ -29,9 +31,6 @@ function App() {
       <div>
         <SearchBar songs={songs} setSongs={setSongs} />
       </div>
-
-
-
     </div>
   );
 }

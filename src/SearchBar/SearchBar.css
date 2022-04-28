@@ -1,0 +1,15 @@
+.search-box{
+    margin-left: 60%;
+}
+
+.search-button{
+    background-color: maroon;
+    color: gold;
+    border-radius: 12px;
+    margin-left: 2px;
+
+}
+
+.input{
+    width: 15em;
+}

@@ -1,0 +1,18 @@
+.table{
+    border: solid;
+    width: 100%;
+    background-color: cornsilk;
+}
+
+.table-header{
+background-color: maroon;
+color: gold;
+border: solid;
+height: 45px;
+
+}
+
+.row{
+    border: solid;
+    text-align: center
+}
